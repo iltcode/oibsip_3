@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 95vh;
+    width: 100vw;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 1rem;
+}
+
+
+.inputBox{
+    width: 20rem;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    background-color: aliceblue;
+    gap: 1rem;
+    padding: 1rem;
+    
+}
+
+input{
+    width: 17.8rem;
+    height: 2rem;
+    padding: 12px 20px;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.2rem;
+}
+
+#description{
+    width: 17.8rem;
+    height: 23rem;
+    padding: 12px 20px;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.2rem;
+    resize: none;
+}
+
+.inputBox button{
+    width: 17.8rem;
+    height: 2rem;
+    border: 0.05rem solid #ccc;
+    border-radius: 0.2rem;
+    background-color: green;
+    color: white;
+}
+
+
+.listBox{
+   background-color: white;
+   width: 30rem;
+   height: 32rem;
+   overflow-y: scroll;
+}
+
+.listCompleted{
+    background-color: white;
+    width: 30rem;
+    height: 32rem;
+    overflow-y: scroll;
+}
+
+ul {
+    user-select: none;
+    cursor: pointer;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+li{
+    width: 95%;
+    height: 2rem;
+    background-color: rgba(139, 219, 218, 0.848);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    position: relative;
+}
+
+.delete{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    font-size: x-large;
+    background-color: red;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.mainText{
+    background-color: rgba(139, 219, 218, 0.046);
+    width: 60%;
+    height: 100%;
+    font-size: large;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.edit{
+    background-color: rgb(100, 112, 122);
+    color: white;
+    width: 2.5rem;
+    height: 1.5rem;
+    font-size: large;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.descBut{
+    background-color: rgb(100, 112, 122);
+    color: white;
+    width: 2.9rem;
+    height: 1.5rem;
+    font-size: large;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(66, 66, 223, 0.552);
+    font-weight: 400;
+    font-family: Courier, monospace;
+    font-size: x-large;
+}
+
+h2{
+    height: 5vh;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding-top: 2rem;
+    background-color: blanchedalmond;
+    text-decoration: underline;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc{
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+    background-color: rgb(222, 209, 110);
+    overflow-wrap: break-word;
+    resize: none;
+    border-radius: 5%;
+    visibility: hidden;
+    position: absolute;
+    color: black;
+    font-size: medium;
+    padding: 0.9rem;
+    bottom: -110px;
+    left:-75%;
+    transition: 0.1s;
+    transform: translateX(-30%) translateY(-40px);
+}
+
+.desc::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height:20px;
+    background-color: rgb(222, 209, 110);
+    top: -6px;
+    left: 78%;
+    transform: rotate(45deg);
+}
+
+.descBut:hover .desc{
+    visibility: visible;
+    transition: 0.4s;
+    transform: translateX(-50%) translateY(0px);
+}
+
+
+@media screen and (max-width: 1122px){
+
+    .inputBox{
+        height: 20rem;
+    }
+
+    #description{
+        height: 10rem;
+    }
+    .container{
+        height: auto;
+        width: 100vw;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 18px;
+        background-color: blanchedalmond;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        gap: 1rem;
+    }   
+
+    .listBox{
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .listCompleted{
+        width: 25rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:511px){
+    .inputBox{
+        height: 20rem;
+    }
+
+    #description{
+        height: 10rem;
+    }
+    .container{
+        height: auto;
+        width: 100vw;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 18px;
+        background-color: blanchedalmond;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        gap: 1rem;
+    }   
+
+    .listBox{
+        width: 22rem;
+        height: 20rem;
+    }
+
+    .listCompleted{
+        width: 22rem;
+        height: 20rem;
+    }
+    
+}

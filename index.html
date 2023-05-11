@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List Web App</title>
+</head>
+<body>
+    <h2>To Do List</h2>
+    <div class="container">
+        
+        <div class="inputBox">
+            <input type="text" id="title" placeholder="Add your to-do title">
+            <textarea name="todo" id="description" cols="30" rows="10" placeholder="Add your description here!!!"></textarea>
+            <button onclick="taskAdder()">Save</button>
+        </div>
+        <div class="listBox">
+            <h1>Tasks</h1>
+            <ul id="list">
+            </ul>
+        </div>
+        <div class="listCompleted">
+            <h1>completed Tasks</h1>
+            <ul id="listCom">
+            </ul>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
